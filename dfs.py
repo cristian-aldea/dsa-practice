@@ -1,9 +1,11 @@
 from __future__ import annotations
 
-from common import Node, nodes
+from common import Node, graph
 
 
 def dfs(node: Node, visited: list[bool]):
+    # visit current node
+    # visit children in order, recursively
     if visited[node.index]:
         return
 
@@ -14,6 +16,6 @@ def dfs(node: Node, visited: list[bool]):
         dfs(connection, visited)
 
 
-visited = [False] * len(nodes)
+visited = [False] * len(graph)
 
-dfs(nodes[0], visited)
+dfs(graph[0], visited)

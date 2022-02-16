@@ -1,9 +1,12 @@
 from __future__ import annotations
 
-from common import Node, nodes
+from common import Node, graph
 
 
 def bfs(nodes: list[Node]):
+    # visit current node
+    # add children to queue
+    # repeat
     queue: list[Node] = []
     visited = [False] * len(nodes)
 
@@ -18,8 +21,8 @@ def bfs(nodes: list[Node]):
             if not visited[connection.index]:
                 queue.append(connection)
                 visited[connection.index] = True
-
     pass
 
 
-bfs(nodes)
+if __name__ == "__main__":
+    bfs(graph)

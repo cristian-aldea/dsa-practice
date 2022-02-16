@@ -83,19 +83,20 @@ class ArrayList:
         return out
 
 
-test = ArrayList()
+if __name__ == "__main__":
+    test = ArrayList()
 
-for i in range(20):
-    test.append(i)
+    for i in range(20):
+        test.append(i)
+        print(test.to_string())
+
+    test.add("woah", 10)
     print(test.to_string())
 
-test.add("woah", 10)
-print(test.to_string())
-
-test.set("hehe", 13)
-test.set("wrong", 100)
-print(test.to_string())
-
-for i in range(15):
-    test.remove(0)
+    test.set("hehe", 13)
+    test.set("wrong", 100)
     print(test.to_string())
+
+    for i in range(15):
+        test.remove(0)
+        print(test.to_string())

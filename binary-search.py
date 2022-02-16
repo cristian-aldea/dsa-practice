@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import random
 
-from common import BinaryNode, bst_root
+from common import BinaryNode, bst
 
 
 def binary_search_tree(node: BinaryNode, target: int):
@@ -38,8 +38,7 @@ def binary_search_arr(arr, min, max, target):
         binary_search_arr(arr, middle+1, max, target)
 
 
-# binary_search_tree(bst_root, 12)
-
-arr = [random.randint(0, 100) for _ in range(20)]
-arr.sort()
-binary_search_arr(arr, 0, len(arr)-1, arr[1])
+if __name__ == "__main__":
+    arr = [random.randint(0, 100) for _ in range(20)]
+    arr.sort()
+    binary_search_arr(arr, 0, len(arr)-1, arr[1])
